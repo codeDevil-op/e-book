@@ -1,8 +1,8 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import getBaseUrl from '../../../utils/baseUrl';
+import baseUrl from '../../../utils/baseUrl.js'
 
 const baseQuery = fetchBaseQuery({
-  baseUrl: `${getBaseUrl()}/api/books`,
+  baseUrl: `${baseUrl}/api/books`,
   credentials: "include",
   prepareHeaders: (headers) => {
     const token = localStorage.getItem("token");

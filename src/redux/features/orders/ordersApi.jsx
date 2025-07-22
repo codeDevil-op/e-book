@@ -1,11 +1,11 @@
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
-import getBaseUrl from "../../../utils/baseUrl";
+import baseUrl from "../../../utils/baseUrl.js";
 
 
 const ordersApi = createApi({
     reducerPath: "ordersApi",
     baseQuery: fetchBaseQuery({
-        baseUrl: `${getBaseUrl()}/api/orders`,
+        baseUrl: `${baseUrl}/api/orders`,
         credentials: 'include'
     }),
     tagTypes:['Orders'],
